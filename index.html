@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ちょろけんのすべて オフィシャルサイト</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white antialiased" x-data="{ mobileMenu: false }">
+  <!-- Header -->
+  <header class="fixed w-full z-50 bg-black bg-opacity-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <div class="text-2xl font-bold">ちょろけんのすべて / All Of Choroken</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-yellow-400 transition">About</a>
+        <a href="#contents" class="hover:text-yellow-400 transition">Contents</a>
+        <a href="#shopping" class="hover:text-yellow-400 transition">Shopping</a>
+        <a href="#news" class="hover:text-yellow-400 transition">News</a>
+      </nav>
+      <button @click="mobileMenu = !mobileMenu" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path x-show="!mobileMenu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <path x-show="mobileMenu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-show="mobileMenu" class="md:hidden bg-black">
+      <nav class="flex flex-col items-center space-y-4 py-4">
+        <a href="#about" class="hover:text-yellow-400 transition">About</a>
+        <a href="#contents" class="hover:text-yellow-400 transition">Contents</a>
+        <a href="#shopping" class="hover:text-yellow-400 transition">Shopping</a>
+        <a href="#news" class="hover:text-yellow-400 transition">News</a>
+      </nav>
+    </div>
+  </header>
+
+<!-- Mobile Menu -->
+<div x-show="mobileMenu" class="md:hidden bg-black">
+  <nav class="flex flex-col items-center space-y-4 py-4">
+    <a href="#about" class="hover:text-yellow-400 transition">About</a>
+    <a href="#contents" class="hover:text-yellow-400 transition">Contents</a>
+    <a href="#shopping" class="hover:text-yellow-400 transition">Shopping</a>
+    <a href="#news" class="hover:text-yellow-400 transition">News</a>
+  </nav>
+
+
+</div>  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('./imgs/main/ちょろけんHP素材_bg.svg');">
+    <div class="bg-black bg-opacity-90 p-8 rounded" data-aos="fade-up" data-aos-duration="1000">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4">ちょろけんのすべて</h1>
+      <p class="text-xl md:text-2xl"> The World's First Beaver Type VTuber🦫</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 text-center" data-aos="fade-right">About</h2>
+      <div class="max-w-3xl mx-auto text-lg leading-relaxed" data-aos="fade-left">
+        <p>
+           <img
+            src="./imgs/main/saltbae_ken.jpeg"
+            alt="プロフィール画像"
+            class="w-[384px] h-[384px] mx-auto object-cover rounded-lg mb-2 transition-transform group-hover:scale-105"
+          >
+
+          <br>
+          <strong>ちょろけん</strong>は世界初のビーバー型VTuberとして、持前のモノマネと独創的なキャラクター性を活かし、ゲームや料理の分野においてかつてない新しいエンターテインメントを提供します。
+          スマブラや雀魂などの視聴者参加型配信を通じて、視聴者の意見やリクエストを取り入れたコンテンツ作りを行い、次世代のデジタルコンテンツ体験をリードします。様々なコラボ実績もあります。
+          コラボのご相談はXまでDMをお願いします。
+        <br>
+
+        <div class="flex flex-row justify-center space-x-6 py-8">
+          <a href="http://www.youtube.com/@choroken" class="group" target="_blank" rel="noopener noreferrer">
+            <!-- チャンネルアイコン or サムネイル画像 -->
+            <!-- ボタンテキスト -->
+            <span
+              class="inline-block bg-red-600 text-white font-bold px-4 py-2 rounded hover:bg-red-700 transition">
+              ▶️ YouTubeチャンネル
+            </span>
+          </a>
+          <br>
+
+          <!-- X -->
+          <a href="https://x.com/yourusername"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-block bg-blue-500 text-white font-bold px-5 py-3 rounded hover:bg-blue-600 transition">
+            🐦 Xをフォロー
+          </a>
+
+          <!-- Discord -->
+          <a href="https://discord.gg/your-invite-code"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-block bg-indigo-600 text-white font-bold px-5 py-3 rounded hover:bg-indigo-700 transition">
+            💬 Discord参加
+          </a>
+
+        </div>
+
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contents Section -->
+  <section id="contents" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 text-center" data-aos="zoom-in">Contents</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Repeat for each work -->
+        <div class="rounded overflow-hidden shadow-lg" data-aos="flip-left">
+          <img src="./imgs/main/ちょろけんHP素材_ゲーム.svg" alt="Work 1" class="w-full h-100 object-cover">
+          <div class="p-4 bg-gray-700">
+            <h3 class="text-2xl font-semibold mb-2">ゲーム配信：デジタルの森で、今日もビーバーは走り回る。</h3>
+            <p class="text-sm">スマブラや雀魂、栄冠ナイン、アソビ大全、ダークソウル、逆転裁判他、視聴者から頂いたSteamゲームの実況動画を配信しています。
+              特に、スマブラ、雀魂、栄冠ナイン、アソビ大全は視聴者参加型で、視聴者の意見やリクエストを取り入れたコンテンツ作りを行っています。参加希望の際はライブチャットにて「参加希望」とご入力ください。
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded overflow-hidden shadow-lg" data-aos="flip-left" data-aos-delay="100">
+          <img src="./imgs/main/ちょろけんHP素材_料理.svg" alt="Work 2" class="w-full h-100 object-cover">
+          <div class="p-4 bg-gray-700">
+            <h3 class="text-2xl font-semibold mb-2">料理：つくる、たべる、わけあう。</h3>
+            <p class="text-sm">体内のコアを破壊しない限り無限にローストビーフを錬成します。ローストビーフの他にも多様な肉料理・魚料理を得意としています。
+              ライブ感ある料理配信では、完成までのプロセスを丁寧に見せることで、視聴者に料理の楽しさを伝えています。思わず「食べたい！」と思わせるような料理を目指しています。
+              ゲリラ開催でローストビーフの視聴者プレゼント企画も開催しています。詳細はX(<a href="https://x.com/chorotube" style="color: blue">@chorotube</a>)のポストをご確認ください。</p>
+          </div>
+        </div>
+
+        <div class="rounded overflow-hidden shadow-lg" data-aos="flip-left" data-aos-delay="200">
+          <img src="./imgs/main/ちょろけんHP素材_自然.svg" alt="Work 3" class="w-full h-100 object-cover">
+          <div class="p-4 bg-gray-700">
+            <h3 class="text-2xl font-semibold mb-2">自然保護教育活動：自然とともに、エンタメを育てる。</h3>
+            <p class="text-sm">自然や動物との共生をテーマにした活動にも積極的に取り組んでいます。
+              最近では、実際のビーバーを観察しに足を運び、その仕草や生態の尊さに触れることで、自身の“ルーツ”に向き合う時間を大切にしました。
+              バーベキューや釣り体験を通して、自然の豊かさと儚さを肌で感じたこと、そして自然の素晴らしさを配信やSNSを通じて視聴者へ共有しています。
+              これらのフィールド体験を原点に、ちょろけんはただデジタルコンテンツを発信するだけでなく、
+              “好きだからこそ守りたい美しい自然”という想いを動画に乗せて伝えています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Shopping -->
+  <section id="shopping" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 text-center" data-aos="fade-right">Shopping</h2>
+      <div class="max-w-3xl mx-auto text-lg leading-relaxed" data-aos="fade-left">
+        <p>
+           <!-- 1. 商品画像 -->
+          <img
+            src="./imgs/main/shopping.png"
+            alt="商品名"
+            class="w-100 h-100 object-cover rounded-lg mb-4 transition-transform group-hover:scale-105"
+          >
+          ちょろけんのすべて公式グッズも販売中です。suzuriのページから、Tシャツやマグカップなど、様々なアイテムをチェックしてみてください。
+          また、グッズ購入の際は、ぜひSNSでシェアしていただけると嬉しいです！
+          <div class="text-center py-8">
+            <a href="https://suzuri.jp/choroken" class="text-center bg-blue-400 text-gray-800 font-semibold px-1 py-1 rounded hover:bg-yellow-500 transition">
+             🛍️ ちょろけんのすべて公式グッズ販売サイト
+            </a>
+            </div>
+          </div>
+        <br><br><br>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- News : head に Alpine.js 読み込み済み. -->
+<section id="news" class="py-20 bg-gray-900" x-data>
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">News</h2>
+    <ul class="space-y-6 max-w-2xl mx-auto text-lg">
+      <li x-data="{ open: false }" class="border-b border-gray-700 pb-4">
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="font-semibold">ちょろけんのすべてオフィシャルサイトがオープン</h3>
+            <p class="text-sm text-gray-400">2025年4月18日</p>
+          </div>
+          <button @click="open = !open" class="text-yellow-400 hover:underline">
+            <span x-text="open ? '閉じる' : '詳細'"></span>
+          </button>
+        </div>
+        <div
+          x-bind:style="open
+            ? 'max-height: 500px; opacity: 1; transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;'
+            : 'max-height: 0px;     opacity: 0; transition: max-height 0.1s ease-in-out, opacity 0.1s ease-in-out;'"
+          class="overflow-hidden mt-2 text-gray-300"
+        >
+          <p class="pt-2">
+            ちょろけんのすべてオフィシャルサイトがオープンしました！
+            <br>これからも様々なコンテンツをお届けしていきますので、ぜひご期待ください。
+            <br>今後の活動やイベント情報は、こちらのサイトやX(<a href="https://x.com/chorotube" style="color: blue">@chorotube</a>)・Discordで随時お知らせします。
+          </p>
+        </div>
+      </li>
+      <!-- 他の項目も同様 -->
+    </ul>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-6">
+    <div class="container mx-auto text-center text-sm text-gray-500">
+      © ちょろけんのすべて オフィシャルサイト. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => AOS.init());
+  </script>
+</body>
+</html>
