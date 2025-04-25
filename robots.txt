@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kou7215.github.io/chorotube_official_hp/sitemap.xml
