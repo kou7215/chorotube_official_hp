@@ -186,8 +186,12 @@
             alt="商品名"
             class="w-100 h-100 object-cover rounded-lg mb-4 transition-transform group-hover:scale-105"
           >
-          ちょろけんのすべて公式グッズも販売中です。suzuriのページから、Tシャツやマグカップなど、様々なアイテムをチェックしてみてください。
+          とりみるくん(<a href="https://x.com/Torimilkun" style="color: blue">@Torimilkun</a>)コラボのちょろけんのすべて公式グッズも販売中です。suzuriのページから、Tシャツやマグカップなど、様々なアイテムをチェックしてみてください。
           また、グッズ購入の際は、ぜひSNSでシェアしていただけると嬉しいです！
+          <br><br>【NEW ARRIVAL】うたなかなさん(<a href="https://x.com/utnkn_ovo"
+            style="color: blue">@utnkn_ovo</a>)デザインのオリジナルグッズも発売中です！夏のちょろけんの魅力を最大限に引き出すため、アロハでかわいらしいデザインにしていただきました！ぜひチェックしてみてください！
+          <img src="./imgs/main/shopping_202508.png" alt="商品_202508"
+            class="w-100 h-100 object-cover rounded-lg mb-4 transition-transform group-hover:scale-105">
           <div class="text-center py-8">
             <a href="https://suzuri.jp/choroken" class="text-center bg-blue-400 text-gray-800 font-semibold px-1 py-1 rounded hover:bg-yellow-500 transition">
              🛍️ ちょろけんのすべて公式グッズ販売サイト
@@ -206,6 +210,57 @@
   <div class="container mx-auto px-4">
     <h2 class="text-4xl font-bold mb-8 text-center">News</h2>
     <ul class="space-y-6 max-w-2xl mx-auto text-lg">
+
+      <li x-data="{ open: false }" class="border-b border-gray-700 pb-4">
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="font-semibold">うたなかなさんデザインのオリジナルシャツが入荷しました！</h3>
+            <p class="text-sm text-gray-400">2025年8月28日</p>
+          </div>
+          <button @click="open = !open" class="text-yellow-400 hover:underline">
+            <span x-text="open ? '閉じる' : '詳細'"></span>
+          </button>
+        </div>
+        <div
+          x-bind:style="open
+            ? 'max-height: 500px; opacity: 1; transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;'
+            : 'max-height: 0px;     opacity: 0; transition: max-height 0.1s ease-in-out, opacity 0.1s ease-in-out;'"
+          class="overflow-hidden mt-2 text-gray-300"
+        >
+          <p class="pt-2">
+            うたなかなさん(<a href="https://x.com/utnkn_ovo" style="color: blue">@utnkn_ovo</a>)デザインのNEWファングッズが発売されました！夏のちょろけんの魅力を最大限に引き出すため、アロハでかわいらしいデザインにしていただきました。
+            今回はステッカー、グラス、Tシャツの3種類をご用意しています。
+            特にTシャツは着た瞬間にちょろけんさながらに九州男児のほとばしるＰＯＷＥＲを感じること間違いなしです。
+            ぜひ、うたなかなさんデザインのグッズを手に入れて、アロハなちょろけんを身近に感じてみてください！
+            シャツの購入は、<a href="https://suzuri.jp/choroken" style="color: blue">suzuriの公式グッズ販売サイト</a>から可能です。
+            ぜひチェックしてみてください。
+          </p>
+        </div>
+      </li>
+
+      <li x-data="{ open: false }" class="border-b border-gray-700 pb-4">
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="font-semibold">配信者対抗ロードモバイル大会は2位で終わりました</h3>
+            <p class="text-sm text-gray-400">2025年7月25日</p>
+          </div>
+          <button @click="open = !open" class="text-yellow-400 hover:underline">
+            <span x-text="open ? '閉じる' : '詳細'"></span>
+          </button>
+        </div>
+        <div
+          x-bind:style="open
+            ? 'max-height: 500px; opacity: 1; transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;'
+            : 'max-height: 0px;     opacity: 0; transition: max-height 0.1s ease-in-out, opacity 0.1s ease-in-out;'"
+          class="overflow-hidden mt-2 text-gray-300"
+        >
+          <p class="pt-2">
+            2025年6月26日～2025年7月25日に開催された配信者対抗ロードモバイル大会は2位で終わりました。ご参加いただいた方、応援いただいた方々ありがとうございました！
+          </p>
+        </div>
+      </li>
+
+
       <li x-data="{ open: false }" class="border-b border-gray-700 pb-4">
         <div class="flex justify-between items-center">
           <div>
@@ -229,6 +284,11 @@
           </p>
         </div>
       </li>
+
+
+
+
+
       <!-- 他の項目も同様 -->
     </ul>
   </div>
